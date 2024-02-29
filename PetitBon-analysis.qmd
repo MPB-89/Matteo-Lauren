@@ -21,7 +21,17 @@ summary(lobster_abundance)
 str(lobster_abundance)
 ```
 
+Make a few changes to the dataframe
+```{r}
+lobster_abundance <- lobster_abundance %>%   # let's make sure NAs are properly recognized
+    mutate(SIZE_MM = na_if(SIZE_MM, -99999))
 
+not_napl <- lobster_abundance %>%    # let's create a dataframe that excludes obs from site=NAPL
+    filter(SITE != "NAPL")
+
+aque_70mm <- lobster_abundance %>%     # let's create a dataframe that include only site=AQUE & carapace length > 70 mm
+    filter(SITE == "AQUE" & SIZE_MM >= 70)
+```
 
 
 
