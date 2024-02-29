@@ -1,0 +1,45 @@
+---
+title: "PetitBon-analysis"
+author: "Matteo Petit Bon"
+format: html
+---
+
+## Exercise: Explore, Clean, and Wrangle Data
+
+Loading the libraries needed for the exercise:
+```{r}
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+```
+
+Read in the data for the exercise and make a quick first exploration:
+```{r}
+lobster_abundance <- read_csv("data/Lobster_Abundance_All_Years_20220829.csv")
+summary(lobster_abundance)
+str(lobster_abundance)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
