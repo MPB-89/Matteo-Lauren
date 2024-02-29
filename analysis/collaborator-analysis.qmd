@@ -37,3 +37,18 @@ range(lobster_traps$DATE)
 ## Which sites?
 unique(lobster_traps$SITE)
 ```
+
+```{r}
+lobster_traps <- lobster_traps %>% 
+    mutate(TRAPS = na_if(TRAPS, -99999))
+unique(lobster_traps$TRAPS)
+```
+
+Filter out one site
+```{r}
+subset <- lobster_traps %>%
+    filter(SITE != "NAPL")
+unique(subset$SITE)
+```
+
+
